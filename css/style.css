@@ -1,0 +1,129 @@
+:root {
+    --cyan: hsl(180, 66%, 49%);
+    --darkViolet: hsl(257, 27%, 26%);
+    --red: hsl(0, 87%, 67%);
+    --gray: hsl(0, 0%, 75%);
+    --grayishViolet: hsl(257, 7%, 63%);
+    --veryDarkBlue: hsl(255, 11%, 22%);
+    --veryDarkViolet: hsl(260, 8%, 14%);
+}
+
+body{
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+}
+
+/*nav*/
+nav{
+    display: grid;
+    grid-template-columns: 2fr 5fr 3fr;
+    height: 5em;
+    grid-column-gap: 0.5em;
+    margin-bottom: 1em;
+    padding-left: 5rem;
+}
+
+nav>div{
+    display: flex;
+    align-items: center;
+}
+
+.nav-heading h1{
+    color: var(--veryDarkBlue);
+    margin: 0;
+    font-size: 2.2em;
+}
+
+.nav-sections>span{
+    margin: 0 0.5em;
+    color: var(--gray);
+    font-size: 1e,;
+    transition: all 250ms;
+}
+
+.nav-sections>span:hover{
+    color: var(--veryDarkViolet);
+    cursor: pointer;
+}
+.nav-buttons{
+    display: flex;
+    justify-content: center;
+}
+.nav-buttons button{
+    border: none;
+    margin: 0.1em;
+    padding: 0.5em;
+    width: 6em;
+    font-weight: 700;
+    font-size: 0.9em;
+    border-radius: 1em;
+    transition: all 250ms ease-in-out;
+    cursor: pointer;
+}
+.login{
+    background-color: white;
+    color: var(--grayishViolet);
+}
+.sign-up{
+    background-color: var(--cyan);
+    color: white;
+}
+
+.nav-buttons button:hover{
+    color: white;
+    background-color: lightblue;
+    box-shadow: 3px 5px 4px gainsboro;
+}
+/*header*/
+header{
+    display: grid;
+    grid-template-columns: 5fr 5fr;
+    padding-left: 5rem;
+}
+#header-text{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    padding-right: 8em;
+    box-sizing: border-box;
+}
+#header-text h1{
+    font-size: 3.5em;
+    line-height: 1.2;
+    color: var(--veryDarkBlue);
+    margin-bottom: 0;
+}
+
+#header-text p{
+    color: var(--grayishViolet);
+}
+
+#header-image{
+    display: flex;
+    align-items: center;
+}
+
+#header-image img{
+    width: 100%;
+}
+
+#header-text button{
+    height: 35px;
+    border: none;
+    background-color: var(--cyan);
+    color: white;
+    border-radius: 20px;
+    margin: 0.1em;
+    padding: 0.5em;
+    width: 8em;
+    font-weight: 700;
+    font-size: 0.9em;
+    cursor: pointer;
+    transition: all 200ms ease-in-out;
+}
+
+#header-text button:hover{
+    background-color: lightblue;
+    box-shadow: 3px 5px 4px gainsboro;
+}
