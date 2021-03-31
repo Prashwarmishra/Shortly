@@ -6,6 +6,7 @@
     --grayishViolet: hsl(257, 7%, 63%);
     --veryDarkBlue: hsl(255, 11%, 22%);
     --veryDarkViolet: hsl(260, 8%, 14%);
+    --lightBlue: lightBlue;
 }
 
 body{
@@ -29,10 +30,9 @@ nav>div{
     align-items: center;
 }
 
-.nav-heading h1{
-    color: var(--veryDarkBlue);
-    margin: 0;
-    font-size: 2.2em;
+.nav-heading img{
+    margin-top: 0.4em;
+    cursor: pointer;
 }
 
 .nav-sections>span{
@@ -46,10 +46,12 @@ nav>div{
     color: var(--veryDarkViolet);
     cursor: pointer;
 }
+
 .nav-buttons{
     display: flex;
     justify-content: center;
 }
+
 .nav-buttons button{
     border: none;
     margin: 0.1em;
@@ -61,10 +63,12 @@ nav>div{
     transition: all 250ms ease-in-out;
     cursor: pointer;
 }
+
 .login{
     background-color: white;
     color: var(--grayishViolet);
 }
+
 .sign-up{
     background-color: var(--cyan);
     color: white;
@@ -72,15 +76,17 @@ nav>div{
 
 .nav-buttons button:hover{
     color: white;
-    background-color: lightblue;
+    background-color: var(--lightBlue);
     box-shadow: 3px 5px 4px gainsboro;
 }
+
 /*header*/
 header{
     display: grid;
     grid-template-columns: 5fr 5fr;
-    padding-left: 5rem;
+    padding: 1rem 0 10rem 5rem;
 }
+
 #header-text{
     display: flex;
     flex-wrap: wrap;
@@ -88,6 +94,7 @@ header{
     padding-right: 8em;
     box-sizing: border-box;
 }
+
 #header-text h1{
     font-size: 3.5em;
     line-height: 1.2;
@@ -108,8 +115,8 @@ header{
     width: 100%;
 }
 
-#header-text button{
-    height: 35px;
+#get-started-btn {
+    height: 40px;
     border: none;
     background-color: var(--cyan);
     color: white;
@@ -123,7 +130,237 @@ header{
     transition: all 200ms ease-in-out;
 }
 
-#header-text button:hover{
-    background-color: lightblue;
+#get-started-btn:hover{
+    background-color: var(--lightBlue);
     box-shadow: 3px 5px 4px gainsboro;
+}
+
+/*main*/
+
+main{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: whitesmoke;
+    padding-bottom: 5em;
+}
+
+#link-container{
+    background-image: url(../images/bg-shorten-desktop.svg);
+    height: 7em;
+    width: 75%;
+    border-radius: 0.75em;
+    background-color: var(--darkViolet);
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#link-controls{
+    width: 100%;
+    height: 3em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#link-input{
+    width: 70%;
+    padding: 0.6em;
+    font-size: 0.9em;
+    margin: 0 1em;
+    border-radius: 0.5em;
+    border: none;
+    outline: none;
+    color: var(--darkViolet)
+}
+
+#link-button{
+    padding: 0.6em;
+    font-size: 0.9em;
+    width: 15%;
+    border-radius: 0.5em;
+    border: none;
+    background-color: var(--cyan);
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+#link-button:hover{
+    background-color: var(--lightBlue);
+}
+
+/*stats*/
+
+#stats-container::after{
+    position: relative;
+}
+
+.sc-heading h2{
+    text-align: center;
+    color: var(--veryDarkViolet);
+}
+
+.sc-heading p{
+    width: 61%;
+    margin: auto;
+    text-align: center;
+    color: var(--grayishViolet);
+}
+
+#sc-parent{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 3em;
+    position: relative;
+}
+
+.sc-child{
+    height: 12em;
+    width: 17.5em;
+    margin: 0 1em;
+    background-color: white;
+    box-shadow: 4px 4px 10px 1px gainsboro;
+    border-radius: 5px;
+}
+
+.sc-child:not(:last-child)::after{
+    content: "";
+    position: absolute;
+    height: 10px;
+    width: 3.3%;
+    top: 38%;
+    left: 31.7%;
+    background-color: var(--cyan);
+}
+
+.sc-child:nth-of-type(2){
+    margin-top: 2.5em;
+}
+
+.sc-child:nth-of-type(2)::after{
+    left: 65%;
+    top: 53%;
+}
+
+.sc-child:nth-of-type(3){
+    margin-top: 5em;
+}
+
+.sc-logo{
+    margin-left: 1em;
+    width: 2em;
+    height: 2em;
+    border-radius: 50%;
+    background-color: var(--darkViolet);
+    transform: translateY(-50%);
+    padding: 0.7em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sc-logo img{
+    width: 90%;
+}
+
+.sc-heading{
+    padding-left: 1em;
+}
+
+.sc-info{
+    padding: 1em 2em 1em 1.4em;
+    font-size: 0.8em;
+    color: var(--grayishViolet);
+}
+
+/*boost-section*/
+
+#boost-section{
+    background-image: url(../images/bg-boost-desktop.svg);
+    height: 11em;
+    background-color: var(--darkViolet);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+
+.boost-heading{
+    color: white;
+}
+
+.boost-heading h2{
+    margin: 0.3em 0;
+}
+
+.boost-button #get-started-btn:hover{
+    box-shadow: 4px 4px 10px 1px black;;
+}
+
+/*footer*/
+
+footer{
+    box-sizing: border-box;
+    padding: 2em 4em;
+    background-color: var(--veryDarkViolet);
+    display: grid;
+    grid-template-columns: 2fr 4fr 2fr;
+}
+
+.footer-heading{
+    margin: auto;
+}
+
+.footer-heading img{
+    cursor: pointer;
+}
+
+.footer-links{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.footer-links ul{
+    list-style: none;
+    font-size: 0.85em;
+}
+
+.footer-links ul a{
+    color: white;
+    text-decoration: none;
+}
+
+.footer-links ul>a{
+    display: block;
+    margin: 10px 0;
+}
+
+.footer-links ul>li>a{
+    display: block;
+    margin: 5px 0;
+    color: var(--gray);
+}
+
+.footer-links ul>li>a:hover{
+    color: var(--cyan);
+}
+
+.footer-social-sites{
+    padding: 1em;
+}
+
+.footer-social-sites span{
+    color: white;
+    font-size: 1.2em;
+    padding: 0.5em;
+}
+
+.footer-social-sites span:hover{
+    color: var(--cyan);
 }
