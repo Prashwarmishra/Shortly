@@ -20,6 +20,7 @@ function updateCopyButtons(){
             let shortLink = copyButtonContainer.previousElementSibling.querySelector('span');
             copyText(shortLink);
             copyButton.classList.add("backgroundColorDarkViolet");
+            copyButton.innerText="Copied!";
         });
     });
 }

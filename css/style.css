@@ -273,7 +273,7 @@ main{
 /*stats*/
 
 #stats-container{
-    padding-top: 4em;
+    padding-top: 2em;
 }
 
 #stats-container::after{
@@ -302,7 +302,7 @@ main{
 
 .sc-child{
     height: 12em;
-    width: 17.5em;
+    width: 19em;
     margin: 0 1em;
     background-color: white;
     box-shadow: 4px 4px 10px 1px gainsboro;
@@ -445,13 +445,154 @@ footer{
     color: var(--cyan);
 }
 
-
-/********************************************/
-
 .backGroundColorLightBlue{
     background-color: var(--lightBlue) !important;
 }
 
 .backgroundColorDarkViolet{
     background-color: var(--darkViolet) !important;
+}
+
+/*media-query*/
+
+@media screen and (max-width: 768px) {
+
+    nav{
+        display: flex;
+        align-items: center;
+        padding-left: 1em;
+    }
+
+    .nav-sections, .nav-buttons{
+        display: none;
+    }
+
+    header{
+        display: flex;
+        padding: 0 0 5em 0;
+        flex-wrap: wrap-reverse;
+    }
+
+    #header-image{
+        padding-left: 0.9em;
+    }
+
+    #header-text{
+        padding: 0;
+        justify-content: center;
+    }
+
+    #header-text h1{
+        text-align: center;
+        font-size: 2em;
+    }
+
+    #header-text p{
+        padding: 0 2em;
+    }
+
+    #header-text button{
+        margin: 1em;
+    }
+
+    main{
+        padding-bottom: 0;
+    }
+
+    #link-container{
+        height: 9em;
+        transform: translateY(-50%);
+    }
+
+    #link-controls{
+        flex-direction: column;
+    }
+
+    .invalid-link-message{
+        top: 132%;
+        left: 8%;
+        font-size: 0.6em;
+    }
+
+    #link-button{
+        width: 78%;
+        margin: 0.5em;
+    }
+
+    .lp-child{
+        display: block;
+    }
+
+    .lp-btn>div{
+        padding: 0.5em;
+    }
+
+    .short-link{
+        justify-content: center;
+    }
+
+    .lp-btn{
+        justify-content: center;
+    }
+
+    #stats-container{
+        padding: 2em 1em;
+    }
+
+    .sc-child{
+        width: 90%;
+        margin: 2em 1em !important;
+    }
+
+    .sc-child:not(:last-child)::after{
+        height: 42px;
+        width: 10px;
+        top: 29.1%;
+        left: 48.5%;
+    }
+
+    .sc-child:nth-of-type(2)::after{
+        top: 62.5%;
+    }
+
+    .sc-heading{
+        padding: 0;
+    }
+
+    .sc-heading p{
+        width: 100%;
+    }
+
+    .sc-logo{
+        margin: auto;
+    }
+
+    .sc-heading, .sc-info{
+        text-align: center;
+    }
+    
+    footer{
+        display: block;
+    }
+
+    .footer-links{
+        display: block;
+    }
+
+    .footer-heading {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .footer-links ul {
+        font-size: 1em;
+        text-align: center;
+        padding: 0;
+    }
+
+    .footer-social-sites {
+        padding: 0;
+        text-align: center;
+    }
 }
