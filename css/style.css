@@ -22,7 +22,7 @@ nav{
     height: 5em;
     grid-column-gap: 0.5em;
     margin-bottom: 1em;
-    padding-left: 5rem;
+    padding-left: 7rem;
 }
 
 nav>div{
@@ -84,7 +84,7 @@ nav>div{
 header{
     display: grid;
     grid-template-columns: 5fr 5fr;
-    padding: 1rem 0 10rem 5rem;
+    padding: 1rem 0 10rem 7rem;
 }
 
 #header-text{
@@ -148,14 +148,15 @@ main{
 
 #link-container{
     background-image: url(../images/bg-shorten-desktop.svg);
-    height: 7em;
-    width: 75%;
+    height: 8em;
+    width: 80%;
     border-radius: 0.75em;
     background-color: var(--darkViolet);
     transform: translateY(-50%);
     display: flex;
     justify-content: center;
     align-items: center;
+    position: absolute;
 }
 
 #link-controls{
@@ -164,12 +165,13 @@ main{
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 
 #link-input{
     width: 70%;
     padding: 0.6em;
-    font-size: 0.9em;
+    font-size: 1em;
     margin: 0 1em;
     border-radius: 0.5em;
     border: none;
@@ -177,14 +179,28 @@ main{
     color: var(--darkViolet)
 }
 
+.invalid-link-message{
+    position: absolute;
+    top: 100%;
+    left: 7%;
+    font-size: 0.8em;
+    color: var(--red);
+    display: none;
+}
+
+.display-block{
+    display: block;
+}
+
 #link-button{
     padding: 0.6em;
-    font-size: 0.9em;
+    font-size: 1em;
     width: 15%;
     border-radius: 0.5em;
     border: none;
     background-color: var(--cyan);
     color: white;
+    outline: none;
     font-weight: 700;
     cursor: pointer;
 }
@@ -193,7 +209,72 @@ main{
     background-color: var(--lightBlue);
 }
 
+/*link-provider*/
+
+#link-provider{
+    width: 100%;
+    margin-top: 5em;
+}
+
+.lp-child{
+    min-height: 4em;
+    border-radius: 0.5em;
+    margin: 0.5em auto;
+    width: 80%;
+    background-color: white;
+    display: grid;
+    grid-template-columns: 8fr 2fr 1fr;
+    box-shadow: 5px 5px 5px gainsboro;
+}
+
+.lp-child>div{
+    padding: 1em;
+    display: flex;
+    align-items: center;
+    word-break: break-all;
+}
+
+.original-link{
+    color: var(--darkViolet);
+}
+
+.original-link,.short-link span{
+    font-size: 0.8em;
+}
+
+.short-link{
+    color: var(--cyan);
+    justify-content: flex-end;
+}
+
+.lp-btn{
+    justify-content: flex-end;
+}
+
+.lp-btn>button{
+    width: 6em;
+    font-size: 0.8em;
+    height: 2.5em;
+    background-color: var(--cyan);
+    border: none;
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 250ms;
+    outline: none;
+}
+
+.lp-btn>button:hover{
+    box-shadow: 4px 4px 10px 1px gainsboro;
+    background-color: var(--lightBlue);
+}
+
 /*stats*/
+
+#stats-container{
+    padding-top: 4em;
+}
 
 #stats-container::after{
     position: relative;
@@ -282,7 +363,7 @@ main{
 
 #boost-section{
     background-image: url(../images/bg-boost-desktop.svg);
-    height: 11em;
+    height: 12em;
     background-color: var(--darkViolet);
     display: flex;
     flex-direction: column;
@@ -306,8 +387,7 @@ main{
 /*footer*/
 
 footer{
-    box-sizing: border-box;
-    padding: 2em 4em;
+    padding: 3em 4em;
     background-color: var(--veryDarkViolet);
     display: grid;
     grid-template-columns: 2fr 4fr 2fr;
@@ -363,4 +443,15 @@ footer{
 
 .footer-social-sites span:hover{
     color: var(--cyan);
+}
+
+
+/********************************************/
+
+.backGroundColorLightBlue{
+    background-color: var(--lightBlue) !important;
+}
+
+.backgroundColorDarkViolet{
+    background-color: var(--darkViolet) !important;
 }
