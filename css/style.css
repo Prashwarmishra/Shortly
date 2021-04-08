@@ -80,6 +80,51 @@ nav>div{
     box-shadow: 3px 5px 4px gainsboro;
 }
 
+.burger-icon{
+    display: none;
+}
+
+.burger-icon>div{
+    width: 25px;
+    height: 3px;
+    margin: 5px;
+    background-color: var(--grayishViolet);
+    transition: all 0.5s;
+}
+
+.burger-open .line1{
+    transform: rotate(-45deg) translate(-4px, 1px);
+}
+
+.burger-open .line2{
+    opacity: 0;
+}
+
+.burger-open .line3{
+    transform: rotate(45deg) translate(-10px, -7px);
+}
+
+.burger-links{
+    display: none;
+    transition: transform 0.5s;
+}
+
+.slide{
+    transform: translateX(0) !important;
+}
+
+@keyframes burger-menu-animation {
+    from {
+        transform: translateX(50%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
 /*header*/
 header{
     display: grid;
@@ -459,12 +504,67 @@ footer{
 
     nav{
         display: flex;
+        justify-content: space-between;
         align-items: center;
         padding-left: 1em;
     }
 
     .nav-sections, .nav-buttons{
         display: none;
+    }
+
+    .burger{
+        padding-right: 1em; 
+    }
+
+    .burger-icon{
+        display: block;
+        cursor: pointer;
+    }
+
+    .burger-links{
+        display: block;
+        position: fixed;
+        top: 10%;
+        right: 0%;
+        height: 100%;
+        width: 50%;
+        background-color: white;
+        z-index: 100;
+        box-shadow: -2px 0 5px 0px gainsboro;
+        border-radius: 1.5em 0 0 0em;
+        transform: translateX(110%);
+    }
+
+    .burger-links ul{
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+    }
+
+    .burger-links ul li{
+        padding: 1em;
+    }
+
+    .burger-links ul li a{
+        text-decoration: none;
+        color: var(--veryDarkBlue);
+    }
+
+    .burger-links ul li button{
+        width: 8em;
+        height: 3em;
+        border-radius: 0.5em;
+        background-color: var(--cyan);
+        border: none;
+        font-size: 0.8em;
+        color: white;
+    }
+
+    .burger-links ul li .login{
+        background-color: var(--darkViolet);
     }
 
     header{

@@ -1,5 +1,7 @@
 const linkBtn = $('#link-button');
 const linkInput = $('#link-input').val();
+const burgerIcon = $('.burger-icon');
+
 
 //function to copy shortlink
 function copyText(elem){
@@ -91,3 +93,18 @@ $(linkBtn).click(function(e){
     linkBtn.addClass('backGroundColorLightBlue');
     linkBtn.text("Generating...");
 });
+
+function updateMenu(){
+    $('.burger-links').toggleClass('slide');
+    burgerIcon.toggleClass('burger-open');
+    let elements = document.querySelectorAll('.burger-links ul li');
+    elements.forEach(element => {
+        if(element.style.animation){
+            element.style.animation = '';
+        }else{
+            element.style.animation = `burger-menu-animation 1.5s ease forwards`;
+        }
+    });
+}
+
+$(burgerIcon).click(updateMenu);
